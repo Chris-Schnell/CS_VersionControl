@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour {
 
+    public AudioSource jumpsound;
     public Transform gameobj;
     public float speedxax;
     public Rigidbody2D rbody;
@@ -11,10 +12,12 @@ public class Movement : MonoBehaviour {
     public float jumpForce;
     public Vector2 Vel;
     private bool facingLeft;
+    public Animator myanimator;
 
     // Use this for initialization
     void Start () {
         facingLeft = true;
+        
 	}
 	
 	// Update is called once per frame
@@ -37,8 +40,20 @@ public class Movement : MonoBehaviour {
 
     }
     void FixedUpdate()
-    {   
+    {
+
+        myanimator.SetFloat("Player_Speed", Mathf.Abs(rbody.velocity.x));
+
         
+        if (Physics2D.Raycast(rbody.position, -gameobj.transform.up, 1f))
+        {
+
+            myanimator.SetBool("inair", true);
+        }
+        else
+        {
+            myanimator.SetBool("inair", false);
+        }
 
         if (Input.GetKey("left"))
         {
@@ -54,6 +69,7 @@ public class Movement : MonoBehaviour {
 
             Vel = new Vector2(speedxax, 0f);
             rbody.AddForce(Vel, ForceMode2D.Force);
+            
 
         }
 
@@ -62,6 +78,7 @@ public class Movement : MonoBehaviour {
         {
             rbody.AddForce(new Vector2(0f, jumpForce),ForceMode2D.Impulse);
             canJump = Time.time + 1f;
+            jumpsound.Play();
         }
 
         
