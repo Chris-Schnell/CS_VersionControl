@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class CollideWithPlayer : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public GameController other;
+    private GameObject gc;
+   
+
+    // Use this for initialization
+    void Start () {
+        gc = GameObject.Find("GameController");
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -17,14 +22,13 @@ public class CollideWithPlayer : MonoBehaviour {
     {
         if (col.gameObject.name == "zedadiah")
         {
-            Debug.Log("got em coach");
-            
-        }
-        if (col.gameObject.name == "cursedhand5(Clone)")
-        {
-            Destroy(this.gameObject);
+            other = gc.GetComponent<GameController>();
+            other.GameOver();
+            Time.timeScale = 0;
+
 
         }
+        
         
     }
 }

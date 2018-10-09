@@ -10,7 +10,7 @@ public class SpawnEnemy : MonoBehaviour
     private GameObject TempEn;
     public float startdelay;
     private float last_time;
-    public float en_speed;
+    public float en_speed = 2f;
     private float currentnum;
     public float num_enemy;
     public GameObject target;
@@ -39,7 +39,8 @@ public class SpawnEnemy : MonoBehaviour
 
         if (TempEn)
         {
-            TempEn.transform.position += TempEn.transform.right * Time.deltaTime * 2;
+
+            TempEn.transform.position += TempEn.transform.right * Time.deltaTime * en_speed;
 
             /// Flip Rotation
             if (enflipped < 1)
@@ -55,6 +56,7 @@ public class SpawnEnemy : MonoBehaviour
                     enflipped += 1;
                 }
             }
+            Destroy(TempEn, 10f);
         }
     }
 }

@@ -20,11 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4484343008701388}
   - component: {fileID: 212508202251725934}
-  - component: {fileID: 61515462091432406}
   - component: {fileID: 114516041430410436}
   - component: {fileID: 50519617159208300}
-  - component: {fileID: 82067671043900002}
-  m_Layer: 0
+  - component: {fileID: 114824817938115270}
+  - component: {fileID: 70408765386102738}
+  - component: {fileID: 82617132851534178}
+  m_Layer: 11
   m_Name: cursedhand5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,8 +65,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61515462091432406
-BoxCollider2D:
+--- !u!70 &70408765386102738
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,20 +77,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.23669791, y: -0.008493423}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 0.5}
-    newSize: {x: 1.5, y: 0.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.84858704, y: 0.4150629}
-  m_EdgeRadius: 0
---- !u!82 &82067671043900002
+  m_Offset: {x: -0.23348802, y: -0.0103749065}
+  m_Size: {x: 0.77367395, y: 0.33787915}
+  m_Direction: 1
+--- !u!82 &82617132851534178
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,6 +186,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f55f8be4e4446c42b96b4d483ba15b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  other: {fileID: 0}
+--- !u!114 &114824817938115270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1060682021607266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9327ef661e1fb8d4a82ea9ea8f069e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursedhandcol: {fileID: 70408765386102738}
 --- !u!212 &212508202251725934
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -6,8 +6,7 @@ public class Shoot : MonoBehaviour {
 
     public GameObject bullets;
     public GameObject Bullet_Emitter;
-    public float Bullet_ForceX;
-    public float Bullet_ForceY;
+    public float Bullet_Force = 2f;
     public GameObject TempBull;
     public float startdelay;
     public float num_bullets;
@@ -48,7 +47,8 @@ public class Shoot : MonoBehaviour {
             
            
            
-            TempBull.transform.position += TempBull.transform.right * Time.deltaTime * 2;
+            TempBull.transform.position += TempBull.transform.right * Time.deltaTime * Bullet_Force;
+            Destroy(TempBull, 9f);
 
 
         }

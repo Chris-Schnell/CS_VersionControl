@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4343620029222538}
   - component: {fileID: 212906917363324824}
   - component: {fileID: 114220355343576344}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FallingPiano1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114120807584733804}
   - component: {fileID: 50283098173839560}
   - component: {fileID: 82217863006163126}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Piano Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1994259512069910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4343620029222538}
@@ -108,7 +108,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.23669791, y: -0.008493423}
+  m_Offset: {x: -0.0050252676, y: -0.032254696}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -119,7 +119,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.84858704, y: 0.4150629}
+  m_Size: {x: 0.88422906, y: 0.6289139}
   m_EdgeRadius: 0
 --- !u!82 &82217863006163126
 AudioSource:
@@ -127,7 +127,7 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1994259512069910}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8e40d769e2a34694883c7dde412008a2, type: 3}
@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f55f8be4e4446c42b96b4d483ba15b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  other: {fileID: 0}
 --- !u!212 &212720201275958880
 SpriteRenderer:
   m_ObjectHideFlags: 1

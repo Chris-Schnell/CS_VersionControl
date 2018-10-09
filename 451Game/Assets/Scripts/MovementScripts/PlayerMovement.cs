@@ -13,19 +13,44 @@ public class PlayerMovement : MonoBehaviour {
     public Vector2 Vel;
     private bool facingLeft;
     public Animator myanimator;
+    public Transform limitingCamera;
+    public Collider2D zcol;
 
     // Use this for initialization
     void Start () {
         facingLeft = true;
         
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
         float horiz = Input.GetAxis("Horizontal");
         flip(horiz);
+
+        ///limit movement to camera
+        float leftbound = limitingCamera.position.x - 8.2f;
+        float rightbound = limitingCamera.position.x + 8.2f;
+        transform.position = new Vector3(Mathf.Clamp(gameobj.position.x, leftbound, rightbound), transform.position.y, transform.position.z);
+
+        /// Check if Touching Ground
+        if (zcol.IsTouchingLayers(1<<10))
+        {
+            myanimator.SetBool("inair", false);
         }
+        if (!zcol.IsTouchingLayers(1<<10))
+        {
+            myanimator.SetBool("inair", true);
+        }
+
+        if (Input.GetKeyDown("space") && Time.time > canJump)
+        {
+            playerJump();
+        }
+
+
+    }
     private void flip(float horiz){
         if (horiz < 0 && !facingLeft || horiz > 0 && facingLeft)
         {
@@ -44,8 +69,8 @@ public class PlayerMovement : MonoBehaviour {
 
         myanimator.SetFloat("Player_Speed", Mathf.Abs(rbody.velocity.x));
 
-        
-        if (Physics2D.Raycast(rbody.position, -gameobj.transform.up, 1f))
+        ///detect if in air
+        /*if (!Physics2D.Raycast(rbody.position, -gameobj.transform.up, 1f))
         {
 
             myanimator.SetBool("inair", true);
@@ -54,7 +79,8 @@ public class PlayerMovement : MonoBehaviour {
         {
             myanimator.SetBool("inair", false);
         }
-
+        */
+        ///detect movement
         if (Input.GetKey("left"))
         {
             
@@ -73,14 +99,17 @@ public class PlayerMovement : MonoBehaviour {
 
         }
 
-
-        if (Input.GetKeyDown("space") && Time.time > canJump)
-        {
-            rbody.AddForce(new Vector2(0f, jumpForce),ForceMode2D.Impulse);
-            canJump = Time.time + 1f;
-            jumpsound.Play();
-        }
-
+        ///detect jump
         
+
+
+
     }
+    public void playerJump()
+    {
+        rbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+        canJump = Time.time + 1f;
+        jumpsound.Play();
+    }
+    
 }
