@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        _isGrounded = Physics.CheckSphere(transform.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
+        _isGrounded = Physics.CheckSphere(transform.position - new Vector3 (0f, .5f, 0f), GroundDistance, Ground, QueryTriggerInteraction.Ignore);
 
         _inputs = Vector3.zero;
         _inputs.x = Input.GetAxis("Horizontal");
