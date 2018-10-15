@@ -30,9 +30,8 @@ public class Movement : MonoBehaviour {
 
         _inputs = Vector3.zero;
         _inputs.x = Input.GetAxis("Horizontal");
-        _inputs.z = Input.GetAxis("Vertical");
-        if (_inputs != Vector3.zero)
-            transform.forward = _inputs;
+        _inputs.z = Input.GetAxis("Vertical") * .01f;
+        
 
         if (Input.GetKeyDown("space") && _isGrounded)
         {
