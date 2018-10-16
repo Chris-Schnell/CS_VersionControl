@@ -29,9 +29,17 @@ public class Movement : MonoBehaviour {
         _isGrounded = Physics.CheckSphere(transform.position - new Vector3 (0f, .5f, 0f), GroundDistance, Ground, QueryTriggerInteraction.Ignore);
 
         _inputs = Vector3.zero;
-        _inputs.x = Input.GetAxis("Horizontal");
-        _inputs.z = Mathf.Abs(Input.GetAxis("Vertical"));
-        
+        if (!_isGrounded)
+        {
+            _inputs.x = Input.GetAxis("Horizontal");
+            _inputs.z = Input.GetAxis("Vertical");
+        }
+        if (_isGrounded)
+        {
+            _inputs.x = Input.GetAxis("Horizontal") * 0.5f;
+            _inputs.z = Input.GetAxis("Vertical") * 0.5f;
+        }
+
 
         if (Input.GetKeyDown("space") && _isGrounded)
         {

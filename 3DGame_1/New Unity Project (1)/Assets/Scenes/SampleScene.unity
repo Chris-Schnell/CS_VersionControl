@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.35285407, g: 0.5736406, b: 0.86866194, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1020,6 +1020,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114243713206746016, guid: 62c695530271e024890e7f149e5b9a94,
+        type: 2}
+      propertyPath: GroundDistance
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62c695530271e024890e7f149e5b9a94, type: 2}
   m_IsPrefabAsset: 0
@@ -1091,6 +1096,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4f56a6077125070479772965c072e86f, type: 2}
+    - target: {fileID: 114300684461134680, guid: eca506166d3d8184b83915c18d9e6fe6,
+        type: 2}
+      propertyPath: theBall
+      value: 
+      objectReference: {fileID: 2123933033}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eca506166d3d8184b83915c18d9e6fe6, type: 2}
   m_IsPrefabAsset: 0
@@ -1389,6 +1399,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 10.090708
       objectReference: {fileID: 0}
+    - target: {fileID: 114300684461134680, guid: eca506166d3d8184b83915c18d9e6fe6,
+        type: 2}
+      propertyPath: theBall
+      value: 
+      objectReference: {fileID: 2123933033}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eca506166d3d8184b83915c18d9e6fe6, type: 2}
   m_IsPrefabAsset: 0
