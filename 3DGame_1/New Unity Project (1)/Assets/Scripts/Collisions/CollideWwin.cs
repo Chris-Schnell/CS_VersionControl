@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollideWball : MonoBehaviour {
+public class CollideWwin : MonoBehaviour {
+
 
     public SphereCollider theBall;
-    public BoxCollider current;
-
-    
-
-	
+    public BoxCollider winner;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider == theBall)
         {
-            Debug.Log("got em");
+            Debug.Log("You Win! Next Level");
         }
     }
 }
