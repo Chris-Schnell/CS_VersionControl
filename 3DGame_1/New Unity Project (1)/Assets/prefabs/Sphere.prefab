@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 135947324620036564}
   - component: {fileID: 54700792112152438}
   - component: {fileID: 114243713206746016}
+  - component: {fileID: 114510642078381622}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -114,12 +115,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 8
   JumpHeight: 2
-  GroundDistance: 4
-  DashDistance: 2
+  GroundDistance: 3
   Ground:
     serializedVersion: 2
     m_Bits: 512
   _rbody: {fileID: 54700792112152438}
+--- !u!114 &114510642078381622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305477874852488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b5547d03654d14494237cfc0012616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 4592072505645668}
 --- !u!135 &135947324620036564
 SphereCollider:
   m_ObjectHideFlags: 1
