@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour {
     public float Speed;
     public float JumpHeight;
     public float GroundDistance;
-    public float DashDistance;
+    
     public LayerMask Ground;
 
     public Rigidbody _rbody;
@@ -15,13 +15,15 @@ public class Movement : MonoBehaviour {
     private bool _isGrounded = true;
     private Transform _groundChecker;
 
+    private float lastTimeup;
+    private float lastTimedown;
 
 
-
-	// Use this for initialization
-	void Start () {
-        
-	}
+    // Use this for initialization
+    void Start () {
+        lastTimeup = -5;
+        lastTimedown = -5;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -46,10 +48,16 @@ public class Movement : MonoBehaviour {
             _rbody.AddForce(Vector3.up * Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
         }
 
-        if (Input.GetKeyDown("d"))
+        if (Input.GetKey("x") && Time.time - lastTimeup > 5)
         {
-            Vector3 dashVelocity = Vector3.Scale(transform.forward, DashDistance * new Vector3((Mathf.Log(1f / (Time.deltaTime * _rbody.drag + 1)) / -Time.deltaTime), 0, (Mathf.Log(1f / (Time.deltaTime * _rbody.drag + 1)) / -Time.deltaTime)));
-            _rbody.AddForce(dashVelocity, ForceMode.VelocityChange);
+            _rbody.AddForce(0,275,0);
+            lastTimeup = Time.time;
+        }
+
+        if (Input.GetKey("z") && Time.time - lastTimedown > 5)
+        {
+            _rbody.AddForce(0, -200, 0);
+            lastTimedown = Time.time;
         }
 
     }

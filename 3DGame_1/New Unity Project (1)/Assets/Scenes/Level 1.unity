@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 71029225}
   - component: {fileID: 71029224}
   - component: {fileID: 71029223}
+  - component: {fileID: 71029226}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -247,6 +248,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &71029226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71029222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae69868dbf587b43bbaeb2d154634c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toDoText: {fileID: 1296573930}
+  QtipText: {fileID: 1183819780}
 --- !u!1001 &114387732
 Prefab:
   m_ObjectHideFlags: 0
@@ -613,7 +627,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_textAlignment: 257
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
