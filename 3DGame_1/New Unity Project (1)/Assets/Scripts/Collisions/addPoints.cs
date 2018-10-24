@@ -5,8 +5,11 @@ using UnityEngine;
 public class addPoints : MonoBehaviour
 {
 
-
+    public int currentPoints;
     public GameObject theBall;
+    public pointTracker gameController;
+
+    
 
     void Update()
     {
@@ -15,7 +18,7 @@ public class addPoints : MonoBehaviour
             if ( Mathf.Abs (transform.position.y - theBall.transform.position.y ) < 1)
             {
                 if (Mathf.Abs(transform.position.z - theBall.transform.position.z) < 1){
-                    Debug.Log("points added");
+                    gameController.currentPoints += 1;
                     Destroy(this.gameObject);
                 }
             }
