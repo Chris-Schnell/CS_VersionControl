@@ -13,11 +13,11 @@ public class addPoints : MonoBehaviour
 
     void Update()
     {
-        if (Mathf.Abs(transform.position.x - theBall.transform.position.x ) < 1)
+        if (Mathf.Abs(transform.position.x - theBall.transform.position.x ) < 2.5)
         {
-            if ( Mathf.Abs (transform.position.y - theBall.transform.position.y ) < 1)
+            if ( Mathf.Abs (transform.position.y - theBall.transform.position.y ) < 2.5)
             {
-                if (Mathf.Abs(transform.position.z - theBall.transform.position.z) < 1){
+                if (Mathf.Abs(transform.position.z - theBall.transform.position.z) < 2.5){
                     gameController.currentPoints += 1;
                     Destroy(this.gameObject);
                 }

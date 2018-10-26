@@ -17,7 +17,7 @@ public class InstructionsTwo : MonoBehaviour
     void Start()
     {
         toDoText.SetText("Make Your Way Down the Yellow Path");
-        QtipText.SetText("DO NOT TOUCH ANY RED or BLACK WALLS");
+        QtipText.SetText("Collect AT LEAST 2 Relics");
         toDo2Text.SetText("");
     }
 
