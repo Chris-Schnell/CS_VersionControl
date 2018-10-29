@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9f69d571a9cb54943b5a80ccd6b19e96, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44386813, g: 0.48689783, b: 0.5385726, a: 1}
+  m_IndirectSpecularColor: {r: 0.19689614, g: 0.10040148, b: 0.12123283, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -226,7 +226,7 @@ Prefab:
     - target: {fileID: 20984756922383432, guid: 7e317a82a9acddb469c9bb98827a008c,
         type: 2}
       propertyPath: m_ClearFlags
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 20984756922383432, guid: 7e317a82a9acddb469c9bb98827a008c,
         type: 2}
@@ -535,34 +535,34 @@ Prefab:
     - target: {fileID: 114412483266194270, guid: a39e61dab91ee2c4991ad7fd2747ff1b,
         type: 2}
       propertyPath: m_text
-      value: '        (Quick Practice)
+      value: '(Quick Practice)
 
-        Jump on top of the red wall'
+        Jump over the red wall and onto the green plaltform'
       objectReference: {fileID: 0}
     - target: {fileID: 114412483266194270, guid: a39e61dab91ee2c4991ad7fd2747ff1b,
         type: 2}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 25
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114412483266194270, guid: a39e61dab91ee2c4991ad7fd2747ff1b,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 52
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 114412483266194270, guid: a39e61dab91ee2c4991ad7fd2747ff1b,
         type: 2}
       propertyPath: m_textInfo.spaceCount
-      value: 16
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114412483266194270, guid: a39e61dab91ee2c4991ad7fd2747ff1b,
         type: 2}
       propertyPath: m_textInfo.wordCount
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 114412483266194270, guid: a39e61dab91ee2c4991ad7fd2747ff1b,
         type: 2}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224776514596713998, guid: a39e61dab91ee2c4991ad7fd2747ff1b,
         type: 2}
@@ -625,7 +625,7 @@ Prefab:
     - target: {fileID: 224423492228024418, guid: a39e61dab91ee2c4991ad7fd2747ff1b,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 22
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 1465475761650752, guid: a39e61dab91ee2c4991ad7fd2747ff1b, type: 2}
       propertyPath: m_Name
@@ -634,6 +634,16 @@ Prefab:
     - target: {fileID: 1966623982690682, guid: a39e61dab91ee2c4991ad7fd2747ff1b, type: 2}
       propertyPath: m_Name
       value: qp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114412483266194270, guid: a39e61dab91ee2c4991ad7fd2747ff1b,
+        type: 2}
+      propertyPath: m_margin.x
+      value: 2.2266235
+      objectReference: {fileID: 0}
+    - target: {fileID: 114412483266194270, guid: a39e61dab91ee2c4991ad7fd2747ff1b,
+        type: 2}
+      propertyPath: m_textAlignment
+      value: 258
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39e61dab91ee2c4991ad7fd2747ff1b, type: 2}

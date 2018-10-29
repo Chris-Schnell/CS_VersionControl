@@ -18,7 +18,7 @@ public class InstructionTexts : MonoBehaviour {
     private int z = 0;
 
     void Start () {
-        toDoText.SetText("        (Quick Practice)\nJump on top of the red wall");
+        toDoText.SetText("(Quick Practice)\nJump over the red wall and onto the green plaltform");
         QtipText.SetText("");
         toDoTwoText.SetText("");
     }
