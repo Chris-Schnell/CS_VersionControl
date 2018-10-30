@@ -37,7 +37,7 @@ public class escape : MonoBehaviour
     }
     public void QuitGame()
     {
-        Debug.Log("Quit!");
-        //Application.Quit();
+        
+        Application.Quit();
     }
 }

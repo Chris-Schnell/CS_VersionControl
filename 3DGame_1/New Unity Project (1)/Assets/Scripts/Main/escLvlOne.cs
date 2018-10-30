@@ -16,6 +16,7 @@ public class escLvlOne : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        
         escTutTwo.SetText("");
         escTut.SetText("Press \"Esc\"");
 
@@ -45,8 +46,9 @@ public class escLvlOne : MonoBehaviour {
                 escTutTwo.SetText("");
                 escTut.SetText("");
                 exitPanel.SetActive(false);
-
+                
                 Time.timeScale = 1;
+                check += 1;
             }
         }
 
@@ -77,8 +79,8 @@ public class escLvlOne : MonoBehaviour {
     }
     public void QuitGame()
     {
-        Debug.Log("Quit!");
-        //Application.Quit();
+        
+        Application.Quit();
     }
 }
     

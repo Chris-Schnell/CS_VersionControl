@@ -406,6 +406,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114841178537508490, guid: 9885e1852b76f264f9ba2b30b51e373e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1113878309}
+    - target: {fileID: 114841178537508490, guid: 9885e1852b76f264f9ba2b30b51e373e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9885e1852b76f264f9ba2b30b51e373e, type: 2}
   m_IsPrefabAsset: 0
