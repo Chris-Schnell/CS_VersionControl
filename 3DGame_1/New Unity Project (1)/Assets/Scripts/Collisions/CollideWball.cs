@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollideWball : MonoBehaviour {
 
@@ -15,7 +16,7 @@ public class CollideWball : MonoBehaviour {
     {
         if (collision.collider == theBall)
         {
-            Debug.Log("got em");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
