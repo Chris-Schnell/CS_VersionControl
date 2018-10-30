@@ -50,7 +50,7 @@ public class InstructionTexts : MonoBehaviour {
 
         if (Time.time > 8 && y < 1)
         {
-            QtipText.SetText("Quick Tip:" + "\n" + "- To gain height, QUICKLY press space bar right after the ball bounces off of the ground\n\nThis may take a few tries!");
+            QtipText.SetText("Quick Tip:" + "\n" + "- Use Arrow Keys to Move Around" + "\n" + "\n" + "- To gain height, press space bar AFTER the ball bounces off of the ground\n\nThis may take a few tries!");
             y += 1;
         }
 
