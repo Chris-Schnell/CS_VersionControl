@@ -13,9 +13,11 @@ public class InstructionsTwo : MonoBehaviour
     public TextMeshProUGUI QtipText;
     private int x = 0;
     
+    
 
     void Start()
     {
+        
         toDoText.SetText("Make Your Way Down the Yellow Path");
         QtipText.SetText("Collect AT LEAST 2 Relics");
         toDo2Text.SetText("");
@@ -24,15 +26,16 @@ public class InstructionsTwo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > 8 && x < 1)
+        if (theBall.transform.position.z > 23 && x < 1)
         {
             toDoText.SetText("");
             QtipText.SetText("");
             x += 1;
         }
-        if (theBall.transform.position.z > 110)
+        if (theBall.transform.position.z > 110 && x < 2)
         {
             toDo2Text.SetText("Touch the Green Square to Complete this Level");
+            x += 1;
         }
 
         

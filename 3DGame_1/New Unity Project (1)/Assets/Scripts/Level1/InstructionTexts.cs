@@ -11,21 +11,38 @@ public class InstructionTexts : MonoBehaviour {
     public TextMeshProUGUI toDoText;
     public TextMeshProUGUI QtipText;
     public TextMeshProUGUI toDoTwoText;
+    
     public GameObject theBall;
 
     private int x = 0;
     private int y = 0;
     private int z = 0;
+    
 
     void Start () {
-        toDoText.SetText("(Quick Practice)\nJump over the red wall and onto the green plaltform");
+        
+
+
+        
         QtipText.SetText("");
         toDoTwoText.SetText("");
+        toDoText.SetText("");
+
+
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if  (Time.time > 8 && x < 1)
+
+        
+
+
+        if (Time.time > 0.1 && y < 1)
+        {
+            toDoText.SetText("(Quick Practice)\nJump over the red wall and onto the green plaltform");
+        }
+
+        if  (Time.time > 12 && x < 1)
         {
             toDoText.SetText("");
             x += 1;
