@@ -3589,6 +3589,11 @@ Prefab:
       propertyPath: jumpnow
       value: 
       objectReference: {fileID: 1022652892}
+    - target: {fileID: 23149137190598702, guid: 62c695530271e024890e7f149e5b9a94,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae24cf116cf6fb842b0265dd93348bb8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62c695530271e024890e7f149e5b9a94, type: 2}
   m_IsPrefabAsset: 0
@@ -3673,6 +3678,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4592072505645668, guid: 62c695530271e024890e7f149e5b9a94,
     type: 2}
   m_PrefabInternal: {fileID: 1792487986}
+--- !u!122 &1888384069
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888384061}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278255446
+  m_Size: 0.61
 --- !u!1001 &1910764945
 Prefab:
   m_ObjectHideFlags: 0

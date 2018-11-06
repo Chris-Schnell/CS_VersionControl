@@ -18,14 +18,14 @@ public class Movement : MonoBehaviour {
     private Transform _groundChecker;
 
     private float lastTimeup;
-    private float lastTimedown;
+    
     public GameObject jumpnow;
 
 
     // Use this for initialization
     void Start () {
         lastTimeup = -5;
-        lastTimedown = -5;
+
         
     }
 	

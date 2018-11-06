@@ -22,7 +22,7 @@ public class winLevelThree : MonoBehaviour
     {
         if (gameController.currentPoints > 0)
         {
-            winText.SetText("You Won!\n(Full game still in development)\n\nPress Esc to Exit");
+            winText.SetText("You Won!\nCongratulations\n\nPress Esc to Exit");
         }
     }
 }
