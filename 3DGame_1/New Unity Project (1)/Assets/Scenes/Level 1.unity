@@ -2637,7 +2637,7 @@ Prefab:
     - target: {fileID: 54700792112152438, guid: 62c695530271e024890e7f149e5b9a94,
         type: 2}
       propertyPath: m_CollisionDetection
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62c695530271e024890e7f149e5b9a94, type: 2}

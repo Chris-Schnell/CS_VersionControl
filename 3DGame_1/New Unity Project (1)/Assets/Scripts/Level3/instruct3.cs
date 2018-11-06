@@ -22,7 +22,7 @@ public class instruct3 : MonoBehaviour {
 
         if (Time.time - timestarted > 10)
         {
-            QtipText.SetText("Press \"x\" for an extra boost");
+            QtipText.SetText("Press \"x\" for an extra boost\n\n(Can only be used every 3 seconds)");
         }
 
         if ( Time.time - timestarted > 15)

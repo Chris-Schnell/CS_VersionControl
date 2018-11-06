@@ -563,13 +563,18 @@ Prefab:
     - target: {fileID: 54700792112152438, guid: 62c695530271e024890e7f149e5b9a94,
         type: 2}
       propertyPath: m_CollisionDetection
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23149137190598702, guid: 62c695530271e024890e7f149e5b9a94,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8353f6249507f4b45aed2932b9d368b6, type: 2}
+    - target: {fileID: 114243713206746016, guid: 62c695530271e024890e7f149e5b9a94,
+        type: 2}
+      propertyPath: jumpnow
+      value: 
+      objectReference: {fileID: 1549672774}
     m_RemovedComponents:
     - {fileID: 114510642078381622, guid: 62c695530271e024890e7f149e5b9a94, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 62c695530271e024890e7f149e5b9a94, type: 2}
@@ -1656,6 +1661,111 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1069326868}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1116921049
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224647086368364396, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 503bb0de6856f3d4799c7f2b91ca22aa, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1212900826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,6 +2351,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1549672774 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1553581159307534, guid: 503bb0de6856f3d4799c7f2b91ca22aa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1116921049}
 --- !u!1 &1607009501
 GameObject:
   m_ObjectHideFlags: 0
@@ -3005,7 +3120,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'You Won!
 
-    (Full game still in development)'
+    Congratulations'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3073,10 +3188,10 @@ MonoBehaviour:
   m_margin: {x: -269.41177, y: 0, z: -123.611206, w: 0}
   m_textInfo:
     textComponent: {fileID: 2005719421}
-    characterCount: 41
+    characterCount: 24
     spriteCount: 0
-    spaceCount: 6
-    wordCount: 7
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
     lineCount: 2
     pageCount: 1
