@@ -34,7 +34,7 @@ public class InstructionsTwo : MonoBehaviour
         }
         if (theBall.transform.position.z > 110 && x < 2)
         {
-            toDo2Text.SetText("Touch the Green Square to Complete this Level");
+            toDo2Text.SetText("Touch the Giant Square to Complete this Level");
             x += 1;
         }
 
