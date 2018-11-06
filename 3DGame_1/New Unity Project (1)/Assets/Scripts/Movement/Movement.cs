@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 public class Movement : MonoBehaviour {
 
     public float Speed;
@@ -17,12 +19,14 @@ public class Movement : MonoBehaviour {
 
     private float lastTimeup;
     private float lastTimedown;
+    public GameObject jumpnow;
 
 
     // Use this for initialization
     void Start () {
         lastTimeup = -5;
         lastTimedown = -5;
+        
     }
 	
 	// Update is called once per frame
@@ -35,11 +39,13 @@ public class Movement : MonoBehaviour {
         {
             _inputs.x = Input.GetAxis("Horizontal");
             _inputs.z = Input.GetAxis("Vertical");
+            jumpnow.GetComponent<Image>().color = Color.red;
         }
         if (_isGrounded)
         {
             _inputs.x = Input.GetAxis("Horizontal") * 0.5f;
             _inputs.z = Input.GetAxis("Vertical") * 0.5f;
+            jumpnow.GetComponent<Image>().color = Color.green;
         }
 
 
@@ -52,12 +58,6 @@ public class Movement : MonoBehaviour {
         {
             _rbody.AddForce(0,275,0);
             lastTimeup = Time.time;
-        }
-
-        if (Input.GetKey("z") && Time.time - lastTimedown > 5)
-        {
-            _rbody.AddForce(0, -200, 0);
-            lastTimedown = Time.time;
         }
 
     }
