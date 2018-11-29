@@ -17,32 +17,60 @@ public class RaycastManager : MonoBehaviour {
     [SerializeField] private vital playervitals;
     [SerializeField] private Image crossHair;
     [SerializeField] private TextMeshProUGUI itemnameText;
+    //public ArrayList currentItems = new ArrayList();
+
 
     private void Update()
     {
         RaycastHit hit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
-        if(Physics.Raycast(transform.position,fwd,out hit, rayLength, newLayerMask.value))
+        if (Physics.Raycast(transform.position, fwd, out hit, rayLength, newLayerMask.value))
         {
-            if(hit.collider.CompareTag("Consumable"))
+            
+            Item hitItem = hit.collider.GetComponent<Item>();
+            if (hitItem != null)
             {
                 CrosshairActive();
-                raycastedObj = hit.collider.gameObject;
                 //update UI name
+                itemnameText.text = hitItem.name;
 
                 if (Input.GetMouseButtonDown(0))
                 {
                     //Object properties
+                    hitItem.Pickup();
+
+
 
                 }
             }
-        }
+            else if (hit.collider.GetComponent<Tree>() != null)
+            {
+                CrosshairActive();
+                itemnameText.text = "Tree";
+                GameObject hangAxe = GameObject.Find("Hangaxe");
+                Equipable isEquipped = hangAxe.GetComponent<Equipable>();
 
-        else
-        {
-            CrosshairNormal();
-            //item name back to normal
+                if (Input.GetMouseButtonDown(0) && isEquipped.isEquipped == 1 )
+                {
+                    hit.collider.GetComponent<Tree>().Chop(hit.collider.gameObject);
+                }
+            }
+            /*foreach(var item in currentItems)
+            {
+                Debug.Log(item);
+            }*/
+
+
+
+
+            else
+            {
+                CrosshairNormal();
+                //item name back to normal
+                itemnameText.text = "";
+
+            }
         }
     }
 

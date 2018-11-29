@@ -21,8 +21,8 @@ public class vital : MonoBehaviour {
     public void Start()
     {
         fillVital(Health);
-        fillVital(Hunger);
-        fillVital(Thirst);
+        Hunger.value = .5f;
+        Thirst.value = .5f;
 
         charConroller = GetComponent<CharacterController>();
         playerController = GetComponent<FirstPersonController>();
@@ -94,7 +94,7 @@ public class vital : MonoBehaviour {
 
     public void fillVital(Slider vitalToFill)
     {
-        vitalToFill.value = 100;
+        vitalToFill.value = 1;
     }
 
     public void incVital(Slider vitalToInc , int amountInc)
