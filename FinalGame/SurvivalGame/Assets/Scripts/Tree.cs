@@ -9,7 +9,15 @@ public class Tree : MonoBehaviour {
         GameObject thePlayer = GameObject.Find("FPSController");
         Player woodNum = thePlayer.GetComponent<Player>();
         woodNum.woodAmount += 10;
+
+        currentTree.GetComponent<MeshRenderer>().enabled = false;
+        StartCoroutine(RespawnTree(currentTree));
+    }
+
+    IEnumerator RespawnTree(GameObject tree)
+    {
         
-        currentTree.SetActive(false);
+        yield return new WaitForSeconds(200f);
+        tree.GetComponent<MeshRenderer>().enabled = true;
     }
 }

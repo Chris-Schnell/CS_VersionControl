@@ -64,13 +64,14 @@ public class RaycastManager : MonoBehaviour {
 
 
 
-            else
-            {
-                CrosshairNormal();
-                //item name back to normal
-                itemnameText.text = "";
+            
+        }
+        else
+        {
+            CrosshairNormal();
+            //item name back to normal
+            itemnameText.text = "";
 
-            }
         }
     }
 
