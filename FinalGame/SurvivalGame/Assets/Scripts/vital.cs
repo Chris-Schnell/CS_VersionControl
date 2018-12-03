@@ -21,7 +21,7 @@ public class vital : MonoBehaviour {
     public void Start()
     {
         fillVital(Health);
-        Thirst.value = .1f;
+        
         
 
         charConroller = GetComponent<CharacterController>();

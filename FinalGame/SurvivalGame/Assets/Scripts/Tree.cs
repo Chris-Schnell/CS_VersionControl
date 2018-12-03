@@ -11,6 +11,7 @@ public class Tree : MonoBehaviour {
         woodNum.woodAmount += 10;
 
         currentTree.GetComponent<MeshRenderer>().enabled = false;
+        currentTree.GetComponent<CapsuleCollider>().enabled = false;
         StartCoroutine(RespawnTree(currentTree));
     }
 
@@ -19,5 +20,6 @@ public class Tree : MonoBehaviour {
         
         yield return new WaitForSeconds(200f);
         tree.GetComponent<MeshRenderer>().enabled = true;
+        tree.GetComponent<CapsuleCollider>().enabled = true;
     }
 }
