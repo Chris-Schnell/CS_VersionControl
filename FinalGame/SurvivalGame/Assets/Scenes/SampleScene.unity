@@ -2551,6 +2551,23 @@ MonoBehaviour:
   f: 0
   axe: 0
   woodAmount: 0
+--- !u!4 &748135531 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 2}
+  m_PrefabInternal: {fileID: 447978501}
+--- !u!114 &748135532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 748135529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8c4a58247260a4e83b47061b8f7a8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerobj: {fileID: 748135529}
 --- !u!114 &748135536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2567,6 +2584,21 @@ MonoBehaviour:
   Hunger: {fileID: 857399627}
   Thirst: {fileID: 1625377184}
   stamina: {fileID: 1980651798}
+--- !u!114 &748135537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 748135529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5900afa1c6a7d294eb01f7a97120134f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wall: {fileID: 1567094039546214, guid: c6d8ac1509979ab4ca77f57b9b1a6370, type: 2}
+  fpscon: {fileID: 748135531}
+  iswall: 0
+  thisWall: {fileID: 0}
 --- !u!1 &751986505
 GameObject:
   m_ObjectHideFlags: 0
