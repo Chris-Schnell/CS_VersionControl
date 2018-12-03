@@ -36,6 +36,8 @@ public class Player : MonoBehaviour {
 
     public int woodAmount = 0;
 
+    public int buildmode = 0;
+
 
 
     // Use this for initialization
@@ -146,8 +148,12 @@ public class Player : MonoBehaviour {
         {
             Debug.Log("here1");
             hangWater.Use();
+            
+        }
 
-
+        if (woodAmount >= 10 && Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            buildmode = 1;
         }
 
 
