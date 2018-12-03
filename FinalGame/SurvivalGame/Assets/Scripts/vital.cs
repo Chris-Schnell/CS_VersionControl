@@ -21,8 +21,8 @@ public class vital : MonoBehaviour {
     public void Start()
     {
         fillVital(Health);
-        Hunger.value = .5f;
-        Thirst.value = .5f;
+        Thirst.value = .1f;
+        
 
         charConroller = GetComponent<CharacterController>();
         playerController = GetComponent<FirstPersonController>();
@@ -33,31 +33,31 @@ public class vital : MonoBehaviour {
     {
         if (Thirst.value > 0)
         {
-            lowerVital(Thirst, 5000);
+            lowerVital(Thirst, 300);
         }
         if (Hunger.value > 0)
         {
-            lowerVital(Hunger, 10000);
+            lowerVital(Hunger, 700);
         }
 
 
         if ( Thirst.value*100 < 25 && Thirst.value * 100 > 0)
         {
-            lowerVital(Health, 4000);
+            lowerVital(Health, 900);
         }
         if (Thirst.value * 100 <= 0)
         {
-            lowerVital(Health, 2000);
+            lowerVital(Health, 200);
         }
 
 
         if (Hunger.value * 100 < 25 && Hunger.value * 100 > 0)
         {
-            lowerVital(Health, 5000);
+            lowerVital(Health, 600);
         }
         if (Hunger.value * 100 <= 0)
         {
-            lowerVital(Health, 3000);
+            lowerVital(Health, 300);
         }
 
         //Stamina

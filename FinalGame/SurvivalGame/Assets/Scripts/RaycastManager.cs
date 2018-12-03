@@ -33,7 +33,7 @@ public class RaycastManager : MonoBehaviour {
             {
                 CrosshairActive();
                 //update UI name
-                itemnameText.text = hitItem.name;
+                itemnameText.text = hitItem.GetComponent<Text>().text;
 
                 if (Input.GetMouseButtonDown(0))
                 {
