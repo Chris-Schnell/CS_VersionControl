@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 using TMPro;
 using UnityEngine.UI;
@@ -30,6 +31,11 @@ public class Player : MonoBehaviour {
     public Water hangWater;
     public Food hangFood;
 
+    public GameObject pausepanel;
+
+    public GameObject fpscon;
+   
+
     public int w = 0;
     public int f = 0;
     public int axe = 0;
@@ -37,12 +43,14 @@ public class Player : MonoBehaviour {
     public int woodAmount = 0;
 
     public int buildmode = 0;
-
+    public int isPaused = 0;
 
 
     // Use this for initialization
     void Start () {
         main = this;
+        woodAmount = 0;
+        axe = 0;
 	}
 
     public void AddItemToInventory( Item itemToAdd )
@@ -116,6 +124,25 @@ public class Player : MonoBehaviour {
     }
     private void Update()
     {
+
+        if (Input.GetKeyDown("p") && isPaused == 0)
+        {
+            pausepanel.SetActive(true);
+            FirstPersonController cur = fpscon.GetComponent<FirstPersonController>();
+            cur.enabled = false;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            isPaused += 1;
+        }
+        else if (Input.GetKeyDown("p") && isPaused == 1)
+            {
+            pausepanel.SetActive(false);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            FirstPersonController cur = fpscon.GetComponent<FirstPersonController>();
+            cur.enabled = true;
+            isPaused = 0;
+        }
 
         if (Input.GetKeyDown("tab") && pause == 0)
         {
