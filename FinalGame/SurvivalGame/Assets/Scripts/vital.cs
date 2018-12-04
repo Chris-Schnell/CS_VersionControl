@@ -12,6 +12,7 @@ public class vital : MonoBehaviour {
     public Slider Hunger;
     public Slider Thirst;
 
+    public GameObject gameOverPanel;
 
     public Slider stamina;
 
@@ -21,7 +22,7 @@ public class vital : MonoBehaviour {
     public void Start()
     {
         fillVital(Health);
-        
+
         
 
         charConroller = GetComponent<CharacterController>();
@@ -31,9 +32,18 @@ public class vital : MonoBehaviour {
 
     public void Update()
     {
+
+        if (Health.value <= 0)
+        {
+            gameOverPanel.SetActive(true);
+            FirstPersonController cur = playerController.GetComponent<FirstPersonController>();
+            cur.enabled = false;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
         if (Thirst.value > 0)
         {
-            lowerVital(Thirst, 300);
+            lowerVital(Thirst, 500);
         }
         if (Hunger.value > 0)
         {
@@ -58,6 +68,15 @@ public class vital : MonoBehaviour {
         if (Hunger.value * 100 <= 0)
         {
             lowerVital(Health, 300);
+        }
+
+        if (Hunger.value * 100 >= 80)
+        {
+            incVital(Health, 600);
+        }
+        if (Thirst.value * 100 >= 80)
+        {
+            incVital(Health, 300);
         }
 
         //Stamina

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.SceneManagement;
 
 using TMPro;
 using UnityEngine.UI;
@@ -32,9 +33,14 @@ public class Player : MonoBehaviour {
     public Food hangFood;
 
     public GameObject pausepanel;
+    public GameObject controlspanel;
 
     public GameObject fpscon;
-   
+
+    public GameObject gameOverPanel;
+
+    public GameObject introText;
+    
 
     public int w = 0;
     public int f = 0;
@@ -49,9 +55,10 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start () {
         main = this;
-        woodAmount = 0;
-        axe = 0;
-	}
+        gameOverPanel.SetActive(false);
+        introText.SetActive(true);
+
+    }
 
     public void AddItemToInventory( Item itemToAdd )
     {
@@ -127,6 +134,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown("p") && isPaused == 0)
         {
+            introText.SetActive(false);
             pausepanel.SetActive(true);
             FirstPersonController cur = fpscon.GetComponent<FirstPersonController>();
             cur.enabled = false;
@@ -184,5 +192,47 @@ public class Player : MonoBehaviour {
         }
 
 
+    }
+
+    public void resumeGame()
+    {
+        pausepanel.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        FirstPersonController cur = fpscon.GetComponent<FirstPersonController>();
+        cur.enabled = true;
+        isPaused = 0;
+    }
+
+    public void restartGame()
+    {
+        gameOverPanel.SetActive(false);
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(1);
+
+    }
+    public void showControls()
+    {
+        pausepanel.SetActive(false);
+        controlspanel.SetActive(true);
+    }
+    public void UnshowControls()
+    {
+        controlspanel.SetActive(false);
+        pausepanel.SetActive(true);
+        
+    }
+    public void startGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void exitGame()
+    {
+        Application.Quit();
+    }
+
+    public void toMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

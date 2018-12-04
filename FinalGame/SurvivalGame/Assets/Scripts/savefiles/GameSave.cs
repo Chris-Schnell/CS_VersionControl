@@ -8,6 +8,7 @@ public class GameSave : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        
         RestoreGame();
 
 	}
@@ -32,13 +33,10 @@ public class GameSave : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		if (Input.GetKeyDown("p"))
-        {
-            SaveGame();
-        }
+		
 	}
 
-    void SaveGame()
+    public void SaveGame()
     {
         Player pnow = playerobj.GetComponent<Player>();
         vital vnow = playerobj.GetComponent<vital>();

@@ -34,6 +34,8 @@ public class BuildManager : MonoBehaviour {
         if (ifBuild == 1)
 
         {
+            fps.GetComponent<Player>().invPanel.SetActive(false);
+            fps.GetComponent<Player>().pause = 0;
             buildPanel.SetActive(true);
             if (fps.GetComponent<Player>().woodAmount >= 10)
             {
